@@ -13,6 +13,7 @@ public class Main {
     final static Logger logger = Logger.getLogger(Main.class);
 
     public static void main(String[] args) {
+        Utils utils = new Utils();
         BufferedReader br = null;
 
         try {
@@ -21,7 +22,7 @@ public class Main {
 
             while (true) {
 
-                logger.debug("Enter city name (example New_York or America/New_York): ");
+                logger.debug("Enter zoneID (example New_York or America/New_York) and city name (Some_City): ");
                 String input = br.readLine();
 
                 if ("q".equals(input)) {
@@ -29,7 +30,8 @@ public class Main {
                     System.exit(0);
                 }
 
-
+                //utils.message(input);
+                //utils.allZoneID();
                 //logger.debug("input : " + input);
 
             }
